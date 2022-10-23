@@ -1,0 +1,278 @@
+/*          Responsive styles
+================================================== */
+/*                     Tablet Landscape
+=======================================================================================*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /*   About Section                
+============================ */
+    
+    .about-section {
+        padding-bottom: 100px;
+    }
+    .ab-inf {
+        margin-left: 20px;
+        margin-top: -15px;
+    }
+    .about-left {
+        margin-top: -37px;
+    }
+    /*   Offer Section                
+============================ */
+    
+    section.impres h3 {
+        letter-spacing: 1px;
+    }
+    /*   Services Section                
+============================ */
+    
+    .serview-overly::after {
+        width: 90%;
+    }
+    .promotab-itms .panel {
+        padding-bottom: 32px;
+    }
+    /*   testimonial Section                
+============================ */
+    
+    .testimonial-section {
+        padding-bottom: 80px;
+    }
+}
+/*                      Tablet Portrait
+=======================================================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*   navbar Section                
+============================ */
+    
+    .navbar-right {
+        margin-right: 0px !important;
+    }
+    .nav > li > a {
+        margin: 0 10px;
+        letter-spacing: 1px;
+    }
+    /*   Sider Section                
+============================ */
+    
+    .nivo-controlNav {
+        top: 46%;
+    }
+    /*   About Section                
+============================ */
+    
+    .about-section {
+        padding-bottom: 80px;
+    }
+    .about-warp .col-sm-5 {
+        width: 100%;
+    }
+    .about-warp .col-sm-2 {
+        width: 100%;
+        text-align: center;
+    }
+    .about-right {
+        text-align: center;
+    }
+    .about-left .about-more {
+        text-align: center;
+    }
+    .about-left h3 {
+        text-align: center;
+    }
+    .about-left {
+        margin-top: -88px;
+    }
+    .ab-inf {
+        margin-top: 19px;
+        padding: 0px 17px;
+    }
+    .ab-inf p {
+        font-size: 13px;
+    }
+    /*   Offer Section                
+============================ */
+    
+    .choose-us .btn-chos {
+        padding: 15px 10px;
+        min-width: 83px;
+        letter-spacing: 1px;
+        margin-top: 17px;
+    }
+    /*   work Section                
+============================ */
+    
+    .work-item {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+}
+/*                          Phone
+=======================================================================================*/
+
+@media only screen and (max-width: 767px) {
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFF;
+    }
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: none;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: transparent;
+    }
+    .header-caption h3 {
+        font-size: 18px;
+    }
+    /*   About Section                
+============================ */
+    
+    .about-warp {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-right img {
+        margin-left: 0px;
+        top: -25px;
+    }
+    .about-left h3 {
+        text-align: center;
+    }
+    .about-left .about-more {
+        text-align: center;
+    }
+    .about-section {
+        padding-bottom: 80px;
+    }
+    .about-left {
+        margin-top: -30px;
+    }
+    .ab-inf {
+        margin-top: 20px;
+    }
+    .ab-inf p {
+        text-align: center;
+    }
+    /*   Offer Section                
+============================ */
+    
+    .choose-us {
+        padding-top: 90px;
+    }
+    section.impres h3 {
+        font-size: 20px;
+        text-align: left;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        margin-top: 12px;
+    }
+    section.impres p {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        margin-bottom: 23px;
+    }
+    /*   Services Section                
+============================ */
+    
+    .base-header h3 {
+        letter-spacing: 0px;
+        font-size: 39px;
+        line-height: 40px;
+    }
+    /*   work Section                
+============================ */
+    
+    .work-item {
+        margin-left: 0px;
+    }
+    /*   testimonial Section                
+============================ */
+    
+    .testimonial-section {
+        padding-bottom: 90px;
+    }
+    .testimonial .owl-carousel .item .testi-comment h4 {
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .testimonial-section .owl-theme .owl-controls {
+        margin-top: 193px;
+    }
+    .testimonial .owl-item.center .testi-comment {
+        margin: 0 0px 0 0px;
+        padding: 10px 0px 10px 0px;
+    }
+    .testimonial .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: #1A1919;
+    }
+    .testimonial .owl-theme .owl-dots .owl-dot span {
+        border: 1px solid #201e1e;
+    }
+    /*   footer  Section                
+============================ */
+    
+    .contact-addrs {
+        padding: 0px 15px 35px;
+    }
+    /*   footer  Section                
+============================ */
+    
+    .social_footer a {
+        margin: 0px 11px;
+    }
+}
+/* Mobile Vertical Layout: 488px 
+===============================================================================*/
+
+@media only screen and (min-width: 488px) and (max-width: 767px) {
+    /*   Service  Section                
+============================ */
+    
+    .promotab-section .col-xs-12 {
+        width: 50%;
+    }
+    .promotab-itms .panel-title a {
+        font-size: 18px;
+    }
+    .promotab-itms .panel-title::before {
+        top: 45px;
+    }
+    .full-view {
+        left: 40%;
+    }
+    /*   About  Section                
+============================ */
+    
+    .about-right {
+        text-align: center;
+    }
+    /*   Work  Section                
+============================ */
+    
+    .work-item {
+        margin-bottom: 10px;
+    }
+    .work-section .project-list .col-xs-12 {
+        width: 50%;
+    }
+    /*   Blog  Section                
+============================ */
+    
+    .blog-section .col-xs-12 {
+        width: 50%;
+    }
+    /*   contact  Section                
+============================ */
+    
+    .contact-addrs {
+        text-align: center;
+    }
+}
