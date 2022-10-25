@@ -1,17 +1,21 @@
-from flask import Flask,render_template,request,jsonify, Response
+from flask import Flask, render_template, request, jsonify, Response
 import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from joblib import load
+import pickle
+import os
 
 # =[Variabel Global]=============================
 
-app   = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='/static')
 model = None
 
 # =[Routing]=====================================
 
 # [Routing untuk Halaman Utama atau Home]
+
+
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
@@ -20,11 +24,9 @@ def predict():
         PetalLengthCm = float(request.form['PetalLengthCm'])
         PetalWidthCm = float(request.form['PetalWidthCm'])
 
-
-        values = np.array([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+        values = np.array(
+            [[SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm]])
         prediction = model.predict(values)
-
-
         return render_template('index.html', prediction_text='Hasilnya adalah {}'.format(prediction))
 
 
@@ -53,14 +55,15 @@ def index():
         def to_img_tag(path):
             return '<img src="' + path + '" width="100" >'
         # return render_template("index.html", tables=[X_test.to_html(classes='table table-stripped', index=False, escape=False, formatters=dict(gambar=to_img_tag))], titles=[''])
-        return render_template("index.html", tables=[X_test.to_html(classes='table table-stripped', index=False, escape=False, formatters=dict(gambar=to_img_tag)).replace('border="1"','border="0"')], titles=[''])
+        return render_template("index.html", tables=[X_test.to_html(classes='table table-stripped', index=False, escape=False, formatters=dict(gambar=to_img_tag)).replace('border="1"', 'border="0"')], titles=[''])
 
 # =[Main]========================================
 
-if __name__ == '__main__':
-	
-	# Load model yang telah ditraining
-	model = load('model_iris_dt.model')
 
-	# Run Flask di localhost 
-	app.run(host="localhost", port=5000, debug=True)
+if __name__ == '__main__':
+
+    # Load model yang telah ditraining
+    model = pickle.load(open('model.pkl', 'rb'))
+
+    # Run Flask di localhost
+    app.run(host="localhost", port=5000, debug=True)

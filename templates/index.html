@@ -179,7 +179,7 @@
 								kosong dan merupakan dataset yang paling banyak digunakan dalam pembelajaran machine
 								learning.
 							</p>
-								
+
 						</div>
 						<!--End: About Left-->
 					</div>
@@ -240,6 +240,17 @@
 					<br>
 
 					<!-- End:Contact Form  -->
+				</div>
+				<h1 class="text-2xl mb-8">
+					Klasifikasi Iris
+				</h1>
+				<div class="card-body">
+					<form action="{{ url_for('predict') }}" method="POST">
+						<!-- Result -->
+						<div>
+							<h2> {{prediction_text}}</h2>
+						</div>
+					</form>
 				</div>
 				<!--/.row-->
 				<!--/.container-->
@@ -309,7 +320,7 @@
 						<div class="item">
 							<div>
 								<img alt="" class="img-responsive" src={{ url_for('static',
-									filename='images/testimonial/tes-1.jpg' ) }}>
+									filename='images/testimonial/Ferdi.jpg' ) }}>
 							</div>
 							<div class="testi-comment">
 								<p>Univ. Darma Persada </p>
